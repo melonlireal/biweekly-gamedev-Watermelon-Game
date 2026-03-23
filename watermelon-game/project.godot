@@ -17,12 +17,13 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GlobalRes="*res://gamePlay/main/global_resource.gd"
+GlobalResource="*res://gamePlay/main/global_resource.gd"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/stretch/mode="canvas_items"
 
 [input]
 

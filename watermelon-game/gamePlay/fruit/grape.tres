@@ -8,6 +8,7 @@
 script = ExtResource("1_k5fvq")
 merge_music = ExtResource("1_of1yf")
 drop_music = ExtResource("1_of1yf")
+remove_music = ExtResource("1_of1yf")
 scale = Vector2(0.1, 0.1)
-texure = ExtResource("3_tnacw")
+texture = ExtResource("3_tnacw")
 metadata/_custom_type_script = "uid://cqb534bq16ek5"

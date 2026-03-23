@@ -1,4 +1,3 @@
-class_name GlobalResource
 extends Node
 enum FruitType{
 	GRAPE,

@@ -40,5 +40,3 @@ metadata/_edit_lock_ = true
 [node name="merge_sf" type="AudioStreamPlayer" parent="."]
 
 [node name="drop_sf" type="AudioStreamPlayer" parent="."]
-
-[node name="remove_sf" type="AudioStreamPlayer" parent="."]
