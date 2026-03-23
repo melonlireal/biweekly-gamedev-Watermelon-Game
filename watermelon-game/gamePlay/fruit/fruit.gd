@@ -72,7 +72,7 @@ func dropped():
 	
 func remove():
 	self.hide()
-	collision.disabled = true
+	self.set_deferred("collision.disabled", true)
 	if merge_sf.playing:
 		merge_sf.reparent(get_tree().current_scene)
 		merge_sf.finished.connect(merge_sf.queue_free)

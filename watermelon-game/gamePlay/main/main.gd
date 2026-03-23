@@ -37,7 +37,7 @@ func gen_rand_fruit():
 		pass
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("drop"):
+	if event.is_action_pressed("drop") and curr_gen_fruit:
 		curr_gen_fruit.dropped()
 		gen_rand_fruit()
 		pass
@@ -54,4 +54,4 @@ func _on_bottom_body_entered(body: Node2D) -> void:
 	score_board.text = "score: " + str(score)
 	for fruit:Fruit in fruits.get_children():
 		fruit.remove()
-	gen_rand_fruit()
+	call_deferred("gen_rand_fruit")
