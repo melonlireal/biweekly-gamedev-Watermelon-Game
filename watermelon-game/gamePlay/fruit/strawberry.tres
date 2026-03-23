@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="FruitStats" load_steps=4 format=3 uid="uid://gr61yhnw6cxf"]
+
+[ext_resource type="Script" uid="uid://cqb534bq16ek5" path="res://gamePlay/fruit/fruit_status.gd" id="1_deb1s"]
+[ext_resource type="AudioStream" uid="uid://2lo4lggmt5ra" path="res://assets/creatorshome-sharp-pop-328170.mp3" id="1_gb7pj"]
+[ext_resource type="Texture2D" uid="uid://72lfv4ofit8o" path="res://assets/strawberry.png" id="3_203ji"]
+
+[resource]
+script = ExtResource("1_deb1s")
+fruit_type = 2
+merge_music = ExtResource("1_gb7pj")
+drop_music = ExtResource("1_gb7pj")
+scale = Vector2(0.2, 0.2)
+texure = ExtResource("3_203ji")
+metadata/_custom_type_script = "uid://cqb534bq16ek5"

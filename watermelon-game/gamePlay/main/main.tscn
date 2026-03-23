@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://ch01l0vt6dhrl"]
+
+[ext_resource type="Script" uid="uid://cgpydar5ithhv" path="res://gamePlay/main/bottom.gd" id="1_mb68s"]
+[ext_resource type="Script" uid="uid://csi3wg01sq7eh" path="res://gamePlay/main/main.gd" id="1_n8oex"]
+[ext_resource type="Resource" uid="uid://cpea8e8vkqr2y" path="res://gamePlay/fruit/grape.tres" id="2_soklr"]
+[ext_resource type="Resource" uid="uid://jloesyybqg0" path="res://gamePlay/fruit/cherry.tres" id="3_8quf6"]
+[ext_resource type="Resource" uid="uid://gr61yhnw6cxf" path="res://gamePlay/fruit/strawberry.tres" id="4_xew60"]
+[ext_resource type="Resource" uid="uid://dvuhcvmayahr0" path="res://gamePlay/fruit/lemon.tres" id="5_8xtfj"]
+[ext_resource type="Resource" uid="uid://dffn5hhn8ikrk" path="res://gamePlay/fruit/kiwi.tres" id="6_padeg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n8oex"]
+size = Vector2(3936, 25)
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_n8oex")
+rand_gen_fruit = Dictionary[int, Resource]({
+0: ExtResource("2_soklr"),
+1: ExtResource("3_8quf6"),
+2: ExtResource("4_xew60"),
+3: ExtResource("5_8xtfj"),
+4: ExtResource("6_padeg")
+})
+
+[node name="bucket" type="StaticBody2D" parent="."]
+position = Vector2(948, 1040)
+metadata/_edit_group_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="bucket"]
+polygon = PackedVector2Array(26, 0, 300, 0, 300, -500, 230, -500, 230, -39, -340, -39, -340, -500, -410, -500, -410, 0)
+
+[node name="bottom" type="Area2D" parent="."]
+position = Vector2(881, 1186)
+script = ExtResource("1_mb68s")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bottom"]
+position = Vector2(10, -2.5)
+shape = SubResource("RectangleShape2D_n8oex")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 537.0
+offset_top = 1003.0
+offset_right = 1248.0
+offset_bottom = 1043.0
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 1176.0
+offset_top = 542.0
+offset_right = 1249.0
+offset_bottom = 1047.0
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_left = 535.0
+offset_top = 538.0
+offset_right = 610.0
+offset_bottom = 1040.0
+
+[connection signal="body_entered" from="bottom" to="bottom" method="_on_body_entered"]

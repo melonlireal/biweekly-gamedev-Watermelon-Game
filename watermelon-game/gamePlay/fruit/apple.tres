@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="FruitStats" load_steps=4 format=3 uid="uid://dto1gnrrwkrd5"]
+
+[ext_resource type="AudioStream" uid="uid://2lo4lggmt5ra" path="res://assets/creatorshome-sharp-pop-328170.mp3" id="1_iqaid"]
+[ext_resource type="Script" uid="uid://cqb534bq16ek5" path="res://gamePlay/fruit/fruit_status.gd" id="1_uljch"]
+[ext_resource type="Texture2D" uid="uid://bdpyp5mw8t45g" path="res://assets/apple.png" id="3_pce5h"]
+
+[resource]
+script = ExtResource("1_uljch")
+fruit_type = 6
+merge_music = ExtResource("1_iqaid")
+drop_music = ExtResource("1_iqaid")
+scale = Vector2(0.45, 0.45)
+texure = ExtResource("3_pce5h")
+metadata/_custom_type_script = "uid://cqb534bq16ek5"

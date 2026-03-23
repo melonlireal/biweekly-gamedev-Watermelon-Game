@@ -1,0 +1,14 @@
+class_name GlobalResource
+extends Node
+enum FruitType{
+	GRAPE,
+	CHERRY,
+	STRAWBERRY,
+	LEMON,
+	KIWI,
+	ORANGE,
+	APPLE,
+	PINEAPPLE,
+	COCONUT,
+	WATERMELON
+}

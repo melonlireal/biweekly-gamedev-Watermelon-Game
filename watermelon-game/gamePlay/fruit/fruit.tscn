@@ -1,0 +1,42 @@
+[gd_scene load_steps=13 format=3 uid="uid://b61p10hu3lpgs"]
+
+[ext_resource type="Script" uid="uid://bgswfqbew33b4" path="res://gamePlay/fruit/fruit.gd" id="1_23flb"]
+[ext_resource type="Resource" uid="uid://cpea8e8vkqr2y" path="res://gamePlay/fruit/grape.tres" id="2_5cfhd"]
+[ext_resource type="Resource" uid="uid://jloesyybqg0" path="res://gamePlay/fruit/cherry.tres" id="3_iao5i"]
+[ext_resource type="Resource" uid="uid://gr61yhnw6cxf" path="res://gamePlay/fruit/strawberry.tres" id="4_4qyly"]
+[ext_resource type="Resource" uid="uid://dvuhcvmayahr0" path="res://gamePlay/fruit/lemon.tres" id="5_x58aw"]
+[ext_resource type="Resource" uid="uid://dffn5hhn8ikrk" path="res://gamePlay/fruit/kiwi.tres" id="6_p7hpd"]
+[ext_resource type="Resource" uid="uid://ct6fjorsrfu0n" path="res://gamePlay/fruit/orange.tres" id="7_h7uyy"]
+[ext_resource type="Resource" uid="uid://dto1gnrrwkrd5" path="res://gamePlay/fruit/apple.tres" id="8_1mx4o"]
+[ext_resource type="Resource" uid="uid://cnc88gnlqsqhj" path="res://gamePlay/fruit/pineapple.tres" id="9_5tctl"]
+[ext_resource type="Resource" uid="uid://d24byr6dn74f0" path="res://gamePlay/fruit/coconut.tres" id="10_nf3xk"]
+[ext_resource type="Resource" uid="uid://k1l0wnmmy1tq" path="res://gamePlay/fruit/watermelon.tres" id="11_4qyly"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ts1bj"]
+radius = 150.0
+
+[node name="fruit" type="RigidBody2D"]
+script = ExtResource("1_23flb")
+curr_stats = ExtResource("2_5cfhd")
+resource_map = Dictionary[int, Resource]({
+0: ExtResource("2_5cfhd"),
+1: ExtResource("3_iao5i"),
+2: ExtResource("4_4qyly"),
+3: ExtResource("5_x58aw"),
+4: ExtResource("6_p7hpd"),
+5: ExtResource("7_h7uyy"),
+6: ExtResource("8_1mx4o"),
+7: ExtResource("9_5tctl"),
+8: ExtResource("10_nf3xk"),
+9: ExtResource("11_4qyly")
+})
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ts1bj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="merge_sf" type="AudioStreamPlayer" parent="."]
+
+[node name="drop_sf" type="AudioStreamPlayer" parent="."]

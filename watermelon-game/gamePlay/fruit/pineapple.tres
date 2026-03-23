@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="FruitStats" load_steps=4 format=3 uid="uid://cnc88gnlqsqhj"]
+
+[ext_resource type="Script" uid="uid://cqb534bq16ek5" path="res://gamePlay/fruit/fruit_status.gd" id="1_2on3v"]
+[ext_resource type="AudioStream" uid="uid://2lo4lggmt5ra" path="res://assets/creatorshome-sharp-pop-328170.mp3" id="1_7m6m8"]
+[ext_resource type="Texture2D" uid="uid://dr30b1h1m6cxt" path="res://assets/pineapple.png" id="3_51nwd"]
+
+[resource]
+script = ExtResource("1_2on3v")
+fruit_type = 7
+merge_music = ExtResource("1_7m6m8")
+drop_music = ExtResource("1_7m6m8")
+scale = Vector2(0.5, 0.5)
+texure = ExtResource("3_51nwd")
+metadata/_custom_type_script = "uid://cqb534bq16ek5"
